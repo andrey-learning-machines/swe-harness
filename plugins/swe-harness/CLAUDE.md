@@ -14,4 +14,6 @@ Core loop:
 
 For multi-agent work, start with the `unicorn-orchestrator` skill. For harness
 design, use `harness-improvement`. For Model Context Protocol (MCP) server
-work, use `mcp-server-builder`.
+work, use `mcp-server-builder`. For Specification Kit (Spec Kit) feature
+coverage, use `spec-acceptance-harness` to connect specifications, Gherkin,
+Playwright acceptance tests, and `story_matrix.py` route or capability checks.

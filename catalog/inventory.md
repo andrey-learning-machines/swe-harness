@@ -11,6 +11,7 @@ This inventory records what was packaged and what was intentionally excluded.
 - `harness-improvement`
 - `mcp-server-builder`
 - `playwright`
+- `spec-acceptance-harness`
 - `ui-ux-pro-max`
 - `unicorn-code-reading`
 - `unicorn-domain-devops`

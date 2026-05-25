@@ -1,12 +1,13 @@
 # Architecture
 
-SWE Harness is organized as one reusable public bundle with thin host adapters.
+Software Engineering (SWE) Harness is organized as one reusable public bundle
+with thin host adapters.
 
 ```mermaid
 flowchart LR
   A["Public bundle"] --> B["Skills"]
   A --> C["Specialist agents"]
-  A --> D["MCP guidance"]
+  A --> D["Model Context Protocol guidance"]
   A --> E["Validation scripts"]
   B --> F["Codex adapter"]
   C --> F

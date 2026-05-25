@@ -1,0 +1,17 @@
+Feature: Example feature acceptance
+  Business-readable behavior for one feature.
+
+  Background:
+    Given an authorized user can access the product area
+
+  Scenario: User completes the primary workflow
+    Given the required setup exists
+    When the user completes the primary action
+    Then the user sees the expected result
+    And the result is still available when the user returns
+
+  Scenario: Unauthorized user is blocked
+    Given a user without the required permission
+    When the user attempts the protected action
+    Then the system denies the action
+    And no protected data is exposed

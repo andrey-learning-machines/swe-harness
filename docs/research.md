@@ -60,3 +60,18 @@ flowchart TD
   F[".agents/plugins/marketplace.json"] --> A
   G[".claude-plugin/marketplace.json"] --> A
 ```
+
+## Acceptance Harness
+
+Specification Kit (Spec Kit) provides a durable way to capture a constitution,
+feature specification, plan, and tasks before implementation. SWE Harness adds a
+portable acceptance layer on top: Gherkin for business-readable behavior,
+Playwright for browser-visible proof, and a `story_matrix.py` ledger for route
+or capability drift.
+
+References:
+
+- <https://github.com/github/spec-kit>
+- <https://github.github.com/spec-kit/>
+- <https://cucumber.io/docs/gherkin/>
+- <https://playwright.dev/docs/writing-tests>

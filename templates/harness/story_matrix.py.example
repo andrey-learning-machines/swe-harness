@@ -1,0 +1,38 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+
+
+@dataclass(frozen=True)
+class StoryRoute:
+    story_id: str
+    feature_file: str
+    scenario: str
+    method: str
+    path: str
+    owner: str
+    authorization: str
+
+
+REQUIRED_ROUTES: tuple[StoryRoute, ...] = (
+    StoryRoute(
+        story_id="S1",
+        feature_file="tests/features/example.feature",
+        scenario="User completes the primary workflow",
+        method="GET",
+        path="/api/example",
+        owner="backend",
+        authorization="authenticated user with project access",
+    ),
+)
+
+
+def assert_required_routes_registered(app_routes: set[tuple[str, str]]) -> None:
+    missing = [
+        route
+        for route in REQUIRED_ROUTES
+        if (route.method, route.path) not in app_routes
+    ]
+    assert not missing, "Missing required story routes: " + ", ".join(
+        f"{route.method} {route.path} ({route.story_id})" for route in missing
+    )

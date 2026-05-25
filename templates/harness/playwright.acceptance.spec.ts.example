@@ -1,0 +1,16 @@
+import { expect, test } from "@playwright/test";
+
+test.describe("example feature acceptance", () => {
+  test("user completes the primary workflow", async ({ page }) => {
+    await page.goto("/example");
+
+    await page.getByRole("button", { name: "Start" }).click();
+    await expect(page.getByRole("heading", { name: "Complete" })).toBeVisible();
+  });
+
+  test("unauthorized user is blocked", async ({ page }) => {
+    await page.goto("/example/protected");
+
+    await expect(page.getByText("You do not have access")).toBeVisible();
+  });
+});

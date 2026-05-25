@@ -1,6 +1,6 @@
 {
   "name": "swe-harness",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Portable Software Engineering harness for Codex and Claude Code.",
   "publisher": "Andrey Learning Machines",
   "homepage": "https://github.com/andrey-learning-machines/swe-harness",
@@ -10,7 +10,7 @@
     "claude-code"
   ],
   "included": {
-    "skills": 20,
+    "skills": 21,
     "agents": 8,
     "codexMarketplace": ".agents/plugins/marketplace.json",
     "claudeMarketplace": ".claude-plugin/marketplace.json"

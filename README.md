@@ -5,10 +5,10 @@ people who want a production-grade coding-assistant operating loop in Codex or
 Claude Code.
 
 It packages reusable skills, specialized agents, Model Context Protocol (MCP)
-guidance, install templates, and safety checks. The goal is not to make an
-agent louder. The goal is to make the work loop clearer: understand the code,
-shape the spec, delegate bounded work, verify with evidence, and avoid leaking
-private configuration.
+guidance, install templates, acceptance harness templates, and safety checks.
+The goal is not to make an agent louder. The goal is to make the work loop
+clearer: understand the code, shape the specification, delegate bounded work,
+verify with evidence, and avoid leaking private configuration.
 
 ```mermaid
 flowchart LR
@@ -27,9 +27,12 @@ flowchart LR
 - A Claude Code plugin at the same path with `.claude-plugin/plugin.json`.
 - A Codex marketplace catalog at `.agents/plugins/marketplace.json`.
 - A Claude Code marketplace catalog at `.claude-plugin/marketplace.json`.
-- Twenty reusable skills covering orchestration, code reading, testing,
+- Twenty-one reusable skills covering orchestration, code reading, testing,
   security, frontend work, Playwright, Gherkin, Google Agent Development Kit
   work, and Model Context Protocol (MCP) server design.
+- A first-class Specification Kit (Spec Kit) acceptance harness pattern that
+  connects feature specifications, Gherkin `.feature` files, Playwright tests,
+  and `story_matrix.py` route or capability checks.
 - Eight specialist agent definitions for architecture, development, quality and
   security, DevOps, polyglot ramp-up, user interface design, frontend building,
   and user experience auditing.
@@ -85,3 +88,12 @@ that work in `ATTRIBUTION.md` and `NOTICE`.
   commands, and assets.
 
 See `docs/research.md` for links and notes.
+
+## Acceptance Harness
+
+The reusable acceptance workflow lives in `docs/spec-kit-acceptance-harness.md`.
+It includes templates under `templates/harness/` for:
+
+- Gherkin feature files
+- Playwright acceptance tests
+- `story_matrix.py` route or capability checks

@@ -24,6 +24,8 @@ Update all of these together:
 - `plugins/swe-harness/.claude-plugin/plugin.json`
 - `.claude-plugin/marketplace.json`
 - `catalog/package.meta.json`
+- `catalog/inventory.md`
+- `README.md`
 
 ## Smoke Tests
 
