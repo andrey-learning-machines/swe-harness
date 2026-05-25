@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -30,6 +31,12 @@ PRIVATE_PATTERNS = [
     re.compile(r"openai-curated"),
     re.compile(r"openai-primary-runtime"),
 ]
+
+PRIVATE_PATTERNS.extend(
+    re.compile(re.escape(term.strip()), re.IGNORECASE)
+    for term in os.environ.get("SWE_HARNESS_PRIVATE_TERMS", "").split(",")
+    if term.strip()
+)
 
 TEXT_SUFFIXES = {
     ".json",
