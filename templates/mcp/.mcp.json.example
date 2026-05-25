@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "example-http-server": {
+      "url": "https://example.com/mcp",
+      "headers": {
+        "Authorization": "{env:EXAMPLE_MCP_TOKEN}"
+      }
+    }
+  }
+}

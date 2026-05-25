@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCP Server Builder"
+  short_description: "Build secure, testable Model Context Protocol servers."
+  default_prompt: "Design, implement, and verify a secure Model Context Protocol server using strict schemas, least privilege, and thorough QA."

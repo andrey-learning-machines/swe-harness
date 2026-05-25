@@ -1,0 +1,19 @@
+{
+  "name": "swe-harness",
+  "version": "0.1.0",
+  "description": "Portable Software Engineering harness for Codex and Claude Code.",
+  "publisher": "Andrey Learning Machines",
+  "homepage": "https://github.com/andrey-learning-machines/swe-harness",
+  "license": "MIT",
+  "hosts": [
+    "codex",
+    "claude-code"
+  ],
+  "included": {
+    "skills": 20,
+    "agents": 8,
+    "codexMarketplace": ".agents/plugins/marketplace.json",
+    "claudeMarketplace": ".claude-plugin/marketplace.json"
+  },
+  "privateFilesPolicy": "Examples and templates only. No real tokens, local credentials, telemetry, transcripts, or vendor cache payloads."
+}

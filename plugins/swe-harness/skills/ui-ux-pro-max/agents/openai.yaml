@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI/UX Pro Max"
+  short_description: "Searchable UI direction and design-system generation"
+  default_prompt: "Use $ui-ux-pro-max to generate a design system and implementation direction for this interface or product UI."

@@ -1,0 +1,21 @@
+{
+  "name": "swe-harness",
+  "version": "0.1.0",
+  "description": "Portable Software Engineering harness with skills, specialist agents, Model Context Protocol guidance, and validation checks.",
+  "author": {
+    "name": "Andrey Learning Machines",
+    "url": "https://github.com/andrey-learning-machines"
+  },
+  "repository": "https://github.com/andrey-learning-machines/swe-harness",
+  "homepage": "https://github.com/andrey-learning-machines/swe-harness",
+  "license": "MIT",
+  "keywords": [
+    "software-engineering",
+    "claude-code",
+    "codex",
+    "skills",
+    "agents",
+    "harness",
+    "mcp"
+  ]
+}

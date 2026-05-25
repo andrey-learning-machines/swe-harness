@@ -1,0 +1,42 @@
+{
+  "name": "swe-harness",
+  "version": "0.1.0",
+  "description": "Portable Software Engineering harness with skills, specialist agents, Model Context Protocol guidance, and validation checks.",
+  "author": {
+    "name": "Andrey Learning Machines",
+    "url": "https://github.com/andrey-learning-machines"
+  },
+  "homepage": "https://github.com/andrey-learning-machines/swe-harness",
+  "repository": "https://github.com/andrey-learning-machines/swe-harness",
+  "license": "MIT",
+  "keywords": [
+    "software-engineering",
+    "codex",
+    "claude-code",
+    "skills",
+    "agents",
+    "harness",
+    "mcp",
+    "testing",
+    "security"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SWE Harness",
+    "shortDescription": "Production-grade agent harness for software work",
+    "longDescription": "A portable Software Engineering harness for Codex. It bundles skills, specialist agents, Model Context Protocol guidance, and validation checks for specification, implementation, testing, security review, frontend work, and delivery.",
+    "developerName": "Andrey Learning Machines",
+    "category": "Development",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/andrey-learning-machines/swe-harness",
+    "defaultPrompt": [
+      "Plan this feature with the SWE harness",
+      "Review this change with quality and security gates",
+      "Use the Unicorn-inspired agents for this work"
+    ],
+    "brandColor": "#2563EB"
+  }
+}

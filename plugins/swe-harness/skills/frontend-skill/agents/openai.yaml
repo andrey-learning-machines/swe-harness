@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Skill"
+  short_description: "Design scalable, production-grade frontend UI"
+  default_prompt: "Use $frontend-skill to define the visual thesis, system thesis, token plan, and validation gates before building a scalable, production-grade frontend UI."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "ADK Vertex Gen AI"
+  short_description: "Build Vertex AI ADK Gen AI agents"
+  default_prompt: "Use $adk-vertex-genai to build, deploy, tune, or verify a Vertex AI ADK agent with Gen AI SDK tools."

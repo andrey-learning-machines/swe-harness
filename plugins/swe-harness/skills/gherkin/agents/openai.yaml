@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gherkin"
+  short_description: "Write precise Cucumber Gherkin feature files"
+  default_prompt: "Use $gherkin to draft, review, or refactor Cucumber Gherkin feature files and executable specifications using the official syntax and guidance."

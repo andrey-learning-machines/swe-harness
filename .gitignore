@@ -1,0 +1,22 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+*.local.json
+*.local.toml
+*.local.yaml
+*.local.yml
+node_modules/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+dist/
+build/
+tmp/
+*.log
+
+# Local rendered plugin installs and credential-bearing config.
+.claude/settings.local.json
+.codex/auth.json
+templates/private/*.real.*

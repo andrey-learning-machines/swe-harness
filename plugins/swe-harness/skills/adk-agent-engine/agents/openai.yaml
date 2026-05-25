@@ -1,0 +1,4 @@
+interface:
+  display_name: "ADK Agent Engine"
+  short_description: "Build and deploy Google ADK agents"
+  default_prompt: "Use $adk-agent-engine to build, deploy, or verify a Google ADK agent on Agent Engine."

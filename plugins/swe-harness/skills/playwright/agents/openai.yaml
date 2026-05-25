@@ -1,0 +1,4 @@
+interface:
+  display_name: "Playwright"
+  short_description: "Build robust Playwright tests and browser workflows"
+  default_prompt: "Use $playwright to build, review, or debug Playwright tests, browser scripts, or browser automation playbooks using the official documentation."

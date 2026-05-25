@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness Improvement"
+  short_description: "Improve production agent harness quality"
+  default_prompt: "Use $harness-improvement to audit this project harness and propose production-grade improvements."

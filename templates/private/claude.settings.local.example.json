@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "swe-harness": {
+      "source": {
+        "source": "github",
+        "repo": "andrey-learning-machines/swe-harness"
+      }
+    }
+  }
+}

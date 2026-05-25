@@ -1,0 +1,12 @@
+SWE Harness
+Copyright (c) 2026 Andrey Learning Machines contributors
+
+This repository includes and adapts Unicorn Team ideas, skill patterns, and
+agent orchestration concepts from:
+
+  10X Developer Unicorn / Unicorn Team
+  Copyright (c) 2026 AJ Geddes
+  https://github.com/aj-geddes/unicorn-team
+  Licensed under the MIT License.
+
+The full upstream MIT notice is preserved in ATTRIBUTION.md.
