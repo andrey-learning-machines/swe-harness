@@ -2,10 +2,12 @@
 .env
 .env.*
 !.env.example
-*.local.json
 *.local.toml
-*.local.yaml
+*.local.json
 *.local.yml
+.mcp-auth/
+.linear/
+*.local.yaml
 node_modules/
 __pycache__/
 .pytest_cache/

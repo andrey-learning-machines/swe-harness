@@ -17,3 +17,5 @@ design, use `harness-improvement`. For Model Context Protocol (MCP) server
 work, use `mcp-server-builder`. For Specification Kit (Spec Kit) feature
 coverage, use `spec-acceptance-harness` to connect specifications, Gherkin,
 Playwright acceptance tests, and `story_matrix.py` route or capability checks.
+For Linear planning, use `linear-gherkin-stories` to convert reviewed Gherkin
+scenarios into draft stories before creating or updating Linear issues.

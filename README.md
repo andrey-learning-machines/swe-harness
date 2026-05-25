@@ -27,12 +27,14 @@ flowchart LR
 - A Claude Code plugin at the same path with `.claude-plugin/plugin.json`.
 - A Codex marketplace catalog at `.agents/plugins/marketplace.json`.
 - A Claude Code marketplace catalog at `.claude-plugin/marketplace.json`.
-- Twenty-one reusable skills covering orchestration, code reading, testing,
+- Twenty-two reusable skills covering orchestration, code reading, testing,
   security, frontend work, Playwright, Gherkin, Google Agent Development Kit
-  work, and Model Context Protocol (MCP) server design.
+  work, Linear story creation, and Model Context Protocol (MCP) server design.
 - A first-class Specification Kit (Spec Kit) acceptance harness pattern that
   connects feature specifications, Gherkin `.feature` files, Playwright tests,
   and `story_matrix.py` route or capability checks.
+- A Linear workflow that turns reviewed Gherkin scenarios into Linear user
+  stories through the official Linear MCP server.
 - Eight specialist agent definitions for architecture, development, quality and
   security, DevOps, polyglot ramp-up, user interface design, frontend building,
   and user experience auditing.
@@ -97,3 +99,14 @@ It includes templates under `templates/harness/` for:
 - Gherkin feature files
 - Playwright acceptance tests
 - `story_matrix.py` route or capability checks
+- Linear story draft generation
+
+## Linear Workflow
+
+The reusable Linear workflow lives in `docs/linear-gherkin-workflow.md`.
+It includes:
+
+- Linear Model Context Protocol (MCP) setup for Codex and Claude Code
+- Gherkin-to-Linear story draft generation
+- review-first and idempotent create-or-update rules
+- private credential and OAuth cache hygiene

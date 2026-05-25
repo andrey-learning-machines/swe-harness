@@ -30,3 +30,8 @@ sources:
     url: "https://playwright.dev/docs/writing-tests"
     license: "Documentation referenced, not copied."
     use: "Browser acceptance test authoring guidance."
+  - name: "Linear MCP documentation"
+    author: "Linear"
+    url: "https://linear.app/docs/mcp"
+    license: "Documentation referenced, not copied."
+    use: "Linear Model Context Protocol setup and authentication guidance."

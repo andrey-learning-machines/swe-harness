@@ -1,7 +1,7 @@
 {
   "name": "swe-harness",
-  "version": "0.1.1",
-  "description": "Portable Software Engineering harness with skills, specialist agents, Specification Kit acceptance patterns, Model Context Protocol guidance, and validation checks.",
+  "version": "0.1.2",
+  "description": "Portable Software Engineering harness with skills, specialist agents, Specification Kit acceptance patterns, Linear story workflows, Model Context Protocol guidance, and validation checks.",
   "author": {
     "name": "Andrey Learning Machines",
     "url": "https://github.com/andrey-learning-machines"
@@ -20,6 +20,7 @@
     "gherkin",
     "playwright",
     "acceptance-tests",
+    "linear",
     "mcp",
     "testing",
     "security"
@@ -28,7 +29,7 @@
   "interface": {
     "displayName": "SWE Harness",
     "shortDescription": "Production-grade agent harness for software work",
-    "longDescription": "A portable Software Engineering harness for Codex. It bundles skills, specialist agents, Specification Kit acceptance patterns, Model Context Protocol guidance, and validation checks for specification, implementation, testing, security review, frontend work, and delivery.",
+    "longDescription": "A portable Software Engineering harness for Codex. It bundles skills, specialist agents, Specification Kit acceptance patterns, Linear story workflows, Model Context Protocol guidance, and validation checks for specification, implementation, testing, security review, frontend work, and delivery.",
     "developerName": "Andrey Learning Machines",
     "category": "Development",
     "capabilities": [
@@ -38,6 +39,7 @@
     "websiteURL": "https://github.com/andrey-learning-machines/swe-harness",
     "defaultPrompt": [
       "Plan this feature with the SWE harness",
+      "Convert reviewed Gherkin scenarios into Linear story drafts",
       "Review this change with quality and security gates",
       "Use the Unicorn-inspired agents for this work"
     ],

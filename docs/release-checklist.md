@@ -13,6 +13,8 @@ Use this before tagging or publishing a marketplace update.
 - [ ] No local paths, private repository URLs, customer names, internal project
       names, screenshots with private data, or task transcripts are present.
 - [ ] No files from Codex or Claude Code vendor cache directories are included.
+- [ ] No MCP OAuth state, `.mcp-auth/`, token-bearing local config, Linear
+      workspace links, or private Linear story drafts are included.
 - [ ] Any new Model Context Protocol (MCP) example uses placeholders only.
 - [ ] README install commands match the published repository owner and name.
 

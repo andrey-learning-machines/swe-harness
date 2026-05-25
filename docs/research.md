@@ -75,3 +75,14 @@ References:
 - <https://github.github.com/spec-kit/>
 - <https://cucumber.io/docs/gherkin/>
 - <https://playwright.dev/docs/writing-tests>
+
+## Linear MCP
+
+Linear provides an official remote Model Context Protocol (MCP) server. Linear
+documents a Streamable Hypertext Transfer Protocol (HTTP) endpoint at
+`https://mcp.linear.app/mcp`, OAuth setup for Codex and Claude Code, and a
+local `mcp-remote` bridge for clients that do not support remote MCP directly.
+
+Reference:
+
+- <https://linear.app/docs/mcp>

@@ -35,6 +35,9 @@ This skill targets Codex custom agents installed in `~/.codex/agents`:
 4. Give each writable agent a clear ownership boundary.
 5. Require evidence back: files changed, tests run, findings, or explicit rationale.
 6. Wait sparingly; keep doing non-overlapping work while child agents run.
+7. For medium or large feature work, establish durable intent first with
+   Specification Kit (Spec Kit), Gherkin scenarios, and acceptance evidence
+   before delegating implementation.
 
 ## Default Routing
 
@@ -47,20 +50,30 @@ This skill targets Codex custom agents installed in `~/.codex/agents`:
 | Deploy / CI / infra | `unicorn_devops` |
 | New language / unfamiliar framework | `unicorn_polyglot`, then implementation agent |
 | Visual design / landing page / product UI | `ui_ux_designer`, then `ui_frontend_builder`, then `ux_auditor` |
+| Feature files to Linear stories | Use `linear-gherkin-stories` locally for review-first story drafts, then write through Linear MCP only after approval |
 | Parallel independent workstreams | Spawn multiple agents with disjoint scopes |
 
 ## Delegation Patterns
 
 ### Feature
 
-1. If design risk is non-trivial, ask `unicorn_architect` for a short design package.
-2. Hand implementation to `unicorn_developer` with:
+1. For medium or large features, route through `spec-acceptance-harness` first
+   so the request has a Spec Kit feature specification, Gherkin scenarios,
+   acceptance tests, and story matrix expectations.
+2. If design risk is non-trivial, ask `unicorn_architect` for a short design package.
+3. Hand implementation to `unicorn_developer` with:
    - exact goal
    - relevant files
    - acceptance criteria
    - explicit request to write or update tests first when practical
    - required validation commands
-3. If the change is security-sensitive, externally facing, or broad, run `unicorn_qa_security` on the result.
+4. If the change is security-sensitive, externally facing, or broad, run `unicorn_qa_security` on the result.
+
+### Linear Stories
+
+Use `linear-gherkin-stories` locally when the user asks to turn scenarios into
+backlog items. Generate story drafts, review them with the user, and then create
+or update Linear issues only after explicit approval.
 
 ### Bug Fix
 

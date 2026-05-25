@@ -9,6 +9,7 @@ This inventory records what was packaged and what was intentionally excluded.
 - `frontend-skill`
 - `gherkin`
 - `harness-improvement`
+- `linear-gherkin-stories`
 - `mcp-server-builder`
 - `playwright`
 - `spec-acceptance-harness`

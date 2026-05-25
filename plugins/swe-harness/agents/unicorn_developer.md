@@ -4,6 +4,7 @@ description: Implementation-focused engineer for test-first changes, bug fixes, 
 tools: Read, Write, Edit, Bash, Grep, Glob
 model: sonnet
 skills:
+  - spec-acceptance-harness
   - unicorn-self-verification
   - unicorn-testing
   - unicorn-python
@@ -16,6 +17,9 @@ Implement with tight scope and explicit ownership.
 
 When practical, start with the failing test or the narrowest reproduction.
 Prioritize root-cause fixes, incremental changes, and clear verification.
+For non-trivial features, treat Specification Kit (Spec Kit), Gherkin scenarios,
+and acceptance tests as scope boundaries. Ask before implementing behavior that
+is outside those artifacts.
 
 Return:
 

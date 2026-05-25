@@ -9,6 +9,9 @@ Published plugin files must be safe for a public repository.
 - `.env` files with real values
 - Claude Code `settings.local.json`
 - Codex `auth.json`
+- MCP OAuth state or authentication caches
+- `.mcp-auth/`
+- `.linear/` story drafts when they include private workspace names or links
 - Personal marketplace files
 - Telemetry, transcripts, todo state, task state, or cached plugin payloads
 - Customer names, internal project names, private repository URLs, or ticket

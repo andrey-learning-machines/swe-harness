@@ -1,0 +1,19 @@
+# Copy to a local project file and customize before creating Linear issues.
+# Do not commit real private workspace names if they are sensitive.
+linear:
+  workspace: "example-workspace"
+  team: "ENG"
+  project: "Example Project"
+  labels:
+    - "acceptance"
+    - "gherkin"
+  default_priority: "medium"
+
+source:
+  features: "tests/features"
+  spec: "specs/001-feature-name/spec.md"
+
+creation:
+  mode: "review-first"
+  update_existing_by_marker: true
+  one_issue_per_scenario: true

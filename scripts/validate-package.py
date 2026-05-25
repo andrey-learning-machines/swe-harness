@@ -22,6 +22,17 @@ SECRET_PATTERNS = [
     re.compile(r"sk-[A-Za-z0-9]{20,}"),
     re.compile(r"AKIA[0-9A-Z]{16}"),
     re.compile(r"AIza[0-9A-Za-z_-]{20,}"),
+    re.compile(r"lin_api_[A-Za-z0-9]{20,}", re.IGNORECASE),
+    re.compile(
+        r"LINEAR_API_KEY[^\S\r\n]*=[^\S\r\n]*(?!$|<|\{env:|\$\{)[^\s\"']+",
+        re.IGNORECASE | re.MULTILINE,
+    ),
+    re.compile(
+        r"Authorization\"?\s*:\s*\"Bearer\s+(?!\{env:|<|\$\{)[^\"]+\"",
+        re.IGNORECASE,
+    ),
+    re.compile(r"refresh[_-]?token\"?\s*[:=]\s*\"?[A-Za-z0-9._~+/=-]{20,}", re.IGNORECASE),
+    re.compile(r"access[_-]?token\"?\s*[:=]\s*\"?[A-Za-z0-9._~+/=-]{20,}", re.IGNORECASE),
     re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
 ]
 
@@ -31,6 +42,11 @@ PRIVATE_PATTERNS = [
     re.compile(r"openai-curated"),
     re.compile(r"openai-primary-runtime"),
 ]
+
+FORBIDDEN_PATH_PARTS = {
+    ".mcp-auth",
+    ".linear",
+}
 
 PRIVATE_PATTERNS.extend(
     re.compile(re.escape(term.strip()), re.IGNORECASE)
@@ -112,8 +128,8 @@ def validate_marketplaces() -> None:
 
 def validate_skills() -> None:
     skills = sorted((PLUGIN / "skills").glob("*/SKILL.md"))
-    if len(skills) < 20:
-        fail(f"Expected at least 20 skills, found {len(skills)}")
+    if len(skills) < 22:
+        fail(f"Expected at least 22 skills, found {len(skills)}")
     for skill in skills:
         text = skill.read_text()
         if not text.startswith("---"):
@@ -169,6 +185,20 @@ def scan_patterns(patterns: list[re.Pattern[str]], label: str, allowlist: set[st
     ok(f"{label} scan clean")
 
 
+def validate_forbidden_paths() -> None:
+    findings = [
+        path.relative_to(ROOT).as_posix()
+        for path in ROOT.rglob("*")
+        if ".git" not in path.parts and any(part in FORBIDDEN_PATH_PARTS for part in path.parts)
+    ]
+    if findings:
+        print("[FAIL] forbidden local state paths found:")
+        for finding in findings:
+            print(f"  - {finding}")
+        raise SystemExit(1)
+    ok("forbidden local state path scan clean")
+
+
 def main() -> None:
     validate_json_files()
     validate_manifests()
@@ -177,6 +207,7 @@ def main() -> None:
     validate_agents()
     scan_patterns(SECRET_PATTERNS, "secret")
     scan_patterns(PRIVATE_PATTERNS, "private path/cache", PRIVATE_SCAN_ALLOWLIST)
+    validate_forbidden_paths()
 
 
 if __name__ == "__main__":
