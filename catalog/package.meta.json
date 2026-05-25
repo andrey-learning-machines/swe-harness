@@ -1,7 +1,7 @@
 {
   "name": "swe-harness",
-  "version": "0.1.2",
-  "description": "Portable Software Engineering harness for Codex and Claude Code.",
+  "version": "0.1.3",
+  "description": "Portable Software Engineering harness for Codex and Claude Code with host-specific agent model routing.",
   "publisher": "Andrey Learning Machines",
   "homepage": "https://github.com/andrey-learning-machines/swe-harness",
   "license": "MIT",
@@ -12,6 +12,7 @@
   "included": {
     "skills": 22,
     "agents": 8,
+    "codexAgentTemplates": 8,
     "codexMarketplace": ".agents/plugins/marketplace.json",
     "claudeMarketplace": ".claude-plugin/marketplace.json"
   },

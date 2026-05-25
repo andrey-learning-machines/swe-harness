@@ -1,7 +1,7 @@
 {
   "name": "swe-harness",
-  "version": "0.1.2",
-  "description": "Portable Software Engineering harness with skills, specialist agents, Specification Kit acceptance patterns, Linear story workflows, Model Context Protocol guidance, and validation checks.",
+  "version": "0.1.3",
+  "description": "Portable Software Engineering harness with skills, specialist agents, Codex model-routing templates, Specification Kit acceptance patterns, Linear story workflows, Model Context Protocol guidance, and validation checks.",
   "author": {
     "name": "Andrey Learning Machines",
     "url": "https://github.com/andrey-learning-machines"

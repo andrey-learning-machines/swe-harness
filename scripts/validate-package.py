@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import tomllib
 from pathlib import Path
 
 
@@ -46,6 +47,13 @@ PRIVATE_PATTERNS = [
 FORBIDDEN_PATH_PARTS = {
     ".mcp-auth",
     ".linear",
+}
+
+ANTHROPIC_MODEL_ALIASES = {
+    "claude",
+    "sonnet",
+    "opus",
+    "haiku",
 }
 
 PRIVATE_PATTERNS.extend(
@@ -154,6 +162,26 @@ def validate_agents() -> None:
     ok(f"Validated {len(agents)} agents")
 
 
+def validate_codex_agent_templates() -> None:
+    agents = sorted((ROOT / "templates" / "codex" / "agents").glob("*.toml"))
+    if len(agents) < 8:
+        fail(f"Expected at least 8 Codex agent templates, found {len(agents)}")
+    for agent in agents:
+        try:
+            payload = tomllib.loads(agent.read_text())
+        except tomllib.TOMLDecodeError as exc:
+            fail(f"Invalid TOML in {agent}: {exc}")
+        for key in ["name", "description", "developer_instructions", "model"]:
+            if key not in payload:
+                fail(f"{agent} missing {key}")
+        if payload["name"] != agent.stem:
+            fail(f"{agent} name must match filename stem")
+        model = str(payload["model"]).lower()
+        if any(alias in model for alias in ANTHROPIC_MODEL_ALIASES):
+            fail(f"{agent} uses non-OpenAI Codex model alias: {payload['model']}")
+    ok(f"Validated {len(agents)} Codex agent templates")
+
+
 def is_text_candidate(path: Path) -> bool:
     if path.name in {".DS_Store"}:
         return False
@@ -205,6 +233,7 @@ def main() -> None:
     validate_marketplaces()
     validate_skills()
     validate_agents()
+    validate_codex_agent_templates()
     scan_patterns(SECRET_PATTERNS, "secret")
     scan_patterns(PRIVATE_PATTERNS, "private path/cache", PRIVATE_SCAN_ALLOWLIST)
     validate_forbidden_paths()

@@ -38,6 +38,8 @@ flowchart LR
 - Eight specialist agent definitions for architecture, development, quality and
   security, DevOps, polyglot ramp-up, user interface design, frontend building,
   and user experience auditing.
+- Eight Codex custom-agent templates under `templates/codex/agents/` with
+  OpenAI model routing for Codex subagents.
 - Local install and validation scripts.
 
 ## Quick Install: Claude Code
@@ -61,8 +63,9 @@ Clone the repository, then run:
 ./scripts/install-codex-local.py
 ```
 
-That copies `plugins/swe-harness` to `~/plugins/swe-harness` and adds a
-sanitized entry to `~/.agents/plugins/marketplace.json`.
+That copies `plugins/swe-harness` to `~/plugins/swe-harness`, installs Codex
+custom agents into `~/.codex/agents/`, and adds a sanitized entry to
+`~/.agents/plugins/marketplace.json`.
 
 ## Validate
 
@@ -110,3 +113,9 @@ It includes:
 - Gherkin-to-Linear story draft generation
 - review-first and idempotent create-or-update rules
 - private credential and OAuth cache hygiene
+
+## Model Routing
+
+Codex custom agents use OpenAI model identifiers in TOML files. Claude Code
+plugin agents use Markdown agent files and may use Claude model aliases. The
+current Codex model matrix and fallback policy live in `docs/model-routing.md`.

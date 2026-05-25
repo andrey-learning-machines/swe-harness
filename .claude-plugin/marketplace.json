@@ -5,15 +5,15 @@
     "url": "https://github.com/andrey-learning-machines"
   },
   "metadata": {
-    "description": "Portable Software Engineering harness for Codex and Claude Code with skills, specialist agents, acceptance patterns, Linear workflows, and safety checks.",
-    "version": "0.1.2"
+    "description": "Portable Software Engineering harness for Codex and Claude Code with skills, specialist agents, Codex model routing, acceptance patterns, Linear workflows, and safety checks.",
+    "version": "0.1.3"
   },
   "plugins": [
     {
       "name": "swe-harness",
       "source": "./plugins/swe-harness",
-      "description": "Portable Software Engineering harness with Unicorn-inspired orchestration, Specification Kit acceptance patterns, Linear story workflows, specialist agents, and production-quality validation.",
-      "version": "0.1.2",
+      "description": "Portable Software Engineering harness with Unicorn-inspired orchestration, Codex model routing, Specification Kit acceptance patterns, Linear story workflows, specialist agents, and production-quality validation.",
+      "version": "0.1.3",
       "author": {
         "name": "Andrey Learning Machines",
         "url": "https://github.com/andrey-learning-machines"

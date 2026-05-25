@@ -35,6 +35,12 @@ Codex plugin examples place each plugin under `plugins/<name>/` with a required
 `skills/`, `.app.json`, `.mcp.json`, plugin-level `agents/`, commands, hooks,
 assets, and supporting files.
 
+Codex custom agents use Tom's Obvious Minimal Language (TOML) files under
+`~/.codex/agents/` for personal agents or `.codex/agents/` for project-scoped
+agents. These files can set `model` and `model_reasoning_effort`, so SWE Harness
+keeps Codex model routing in `templates/codex/agents/` instead of reusing Claude
+Code Markdown agent files.
+
 This repository includes a repo-local Codex marketplace at:
 
 ```text
@@ -44,6 +50,8 @@ This repository includes a repo-local Codex marketplace at:
 Reference:
 
 - <https://github.com/openai/plugins>
+- <https://developers.openai.com/codex/subagents>
+- <https://developers.openai.com/codex/models>
 
 ## Shared Design Decision
 

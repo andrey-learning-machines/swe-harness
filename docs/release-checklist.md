@@ -16,6 +16,8 @@ Use this before tagging or publishing a marketplace update.
 - [ ] No MCP OAuth state, `.mcp-auth/`, token-bearing local config, Linear
       workspace links, or private Linear story drafts are included.
 - [ ] Any new Model Context Protocol (MCP) example uses placeholders only.
+- [ ] Codex custom-agent templates use OpenAI model identifiers, not Claude
+      model aliases.
 - [ ] README install commands match the published repository owner and name.
 
 ## Version Bump
@@ -28,6 +30,7 @@ Update all of these together:
 - `catalog/package.meta.json`
 - `catalog/inventory.md`
 - `README.md`
+- `docs/model-routing.md`, when the model matrix changes
 
 ## Smoke Tests
 

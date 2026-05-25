@@ -22,6 +22,24 @@ Then it creates or updates:
 
 with a sanitized `swe-harness` entry.
 
+It also installs Codex custom agents to:
+
+```text
+~/.codex/agents
+```
+
+Those agents use OpenAI model identifiers. Existing differing agent files are
+backed up with a `.pre-swe-harness-<timestamp>.toml.bak` suffix before they are
+replaced.
+
+To skip custom-agent installation:
+
+```bash
+SWE_HARNESS_SKIP_CODEX_AGENTS=1 ./scripts/install-codex-local.py
+```
+
+See `docs/model-routing.md` for the model matrix and fallback policy.
+
 ## Repository Marketplace
 
 The repository also includes:

@@ -38,6 +38,17 @@ This inventory records what was packaged and what was intentionally excluded.
 - `ui_frontend_builder`
 - `ux_auditor`
 
+## Included Codex Agent Templates
+
+- `templates/codex/agents/unicorn_architect.toml`
+- `templates/codex/agents/unicorn_developer.toml`
+- `templates/codex/agents/unicorn_qa_security.toml`
+- `templates/codex/agents/unicorn_devops.toml`
+- `templates/codex/agents/unicorn_polyglot.toml`
+- `templates/codex/agents/ui_ux_designer.toml`
+- `templates/codex/agents/ui_frontend_builder.toml`
+- `templates/codex/agents/ux_auditor.toml`
+
 ## Excluded Assets
 
 - Codex system skills from `~/.codex/skills/.system`

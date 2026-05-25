@@ -16,16 +16,21 @@ work, or a subagent-driven workflow. In ordinary turns, keep work local.
 
 This skill targets Codex custom agents installed in `~/.codex/agents`:
 
-| Agent | Name | Use for |
-|------|------|---------|
-| Architect | `unicorn_architect` | design packages, ADRs, API contracts, tradeoff analysis |
-| Developer | `unicorn_developer` | implementation, bug fixes, TDD, refactors |
-| QA/Security | `unicorn_qa_security` | review, security findings, regression risk, missing tests |
-| DevOps | `unicorn_devops` | CI/CD, IaC, deployment, observability |
-| Polyglot | `unicorn_polyglot` | new language or framework ramp-up |
-| UI Designer | `ui_ux_designer` | design systems, art direction, UX direction |
-| UI Builder | `ui_frontend_builder` | frontend implementation |
-| UX Auditor | `ux_auditor` | accessibility, interaction, responsive, perf review |
+| Agent | Name | Codex model | Use for |
+|------|------|-------------|---------|
+| Architect | `unicorn_architect` | `gpt-5.5` | design packages, ADRs, API contracts, tradeoff analysis |
+| Developer | `unicorn_developer` | `gpt-5.5` | implementation, bug fixes, TDD, refactors |
+| QA/Security | `unicorn_qa_security` | `gpt-5.5` | review, security findings, regression risk, missing tests |
+| DevOps | `unicorn_devops` | `gpt-5.4` | CI/CD, IaC, deployment, observability |
+| Polyglot | `unicorn_polyglot` | `gpt-5.4-mini` | new language or framework ramp-up |
+| UI Designer | `ui_ux_designer` | `gpt-5.4` | design systems, art direction, UX direction |
+| UI Builder | `ui_frontend_builder` | `gpt-5.3-codex` | frontend implementation |
+| UX Auditor | `ux_auditor` | `gpt-5.4-mini` | accessibility, interaction, responsive, perf review |
+
+Codex agents must use OpenAI model identifiers in their Tom's Obvious Minimal
+Language (TOML) configuration. Claude Code agents use a different Markdown
+agent format and may use Claude model aliases. See `docs/model-routing.md` for
+the current model-routing rationale and fallback policy.
 
 ## Core Rules
 

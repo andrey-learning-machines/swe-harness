@@ -1,7 +1,7 @@
 {
   "name": "swe-harness",
-  "version": "0.1.2",
-  "description": "Portable Software Engineering harness with skills, specialist agents, Specification Kit acceptance patterns, Linear story workflows, Model Context Protocol guidance, and validation checks.",
+  "version": "0.1.3",
+  "description": "Portable Software Engineering harness with skills, OpenAI-routed Codex agents, Specification Kit acceptance patterns, Linear story workflows, Model Context Protocol guidance, and validation checks.",
   "author": {
     "name": "Andrey Learning Machines",
     "url": "https://github.com/andrey-learning-machines"
@@ -29,7 +29,7 @@
   "interface": {
     "displayName": "SWE Harness",
     "shortDescription": "Production-grade agent harness for software work",
-    "longDescription": "A portable Software Engineering harness for Codex. It bundles skills, specialist agents, Specification Kit acceptance patterns, Linear story workflows, Model Context Protocol guidance, and validation checks for specification, implementation, testing, security review, frontend work, and delivery.",
+    "longDescription": "A portable Software Engineering harness for Codex. It bundles skills, OpenAI-routed Codex agent templates, Specification Kit acceptance patterns, Linear story workflows, Model Context Protocol guidance, and validation checks for specification, implementation, testing, security review, frontend work, and delivery.",
     "developerName": "Andrey Learning Machines",
     "category": "Development",
     "capabilities": [
